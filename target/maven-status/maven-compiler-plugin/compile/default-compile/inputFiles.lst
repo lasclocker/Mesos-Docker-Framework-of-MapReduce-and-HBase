@@ -1,0 +1,2 @@
+/opt/mesos-docker-framework/src/main/java/com/codefutures/tutorial/mesos/docker/ExampleScheduler.java
+/opt/mesos-docker-framework/src/main/java/com/codefutures/tutorial/mesos/docker/ExampleFramework.java

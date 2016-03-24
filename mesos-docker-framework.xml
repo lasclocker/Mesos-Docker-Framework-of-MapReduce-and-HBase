@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<!-- Put site-specific property overrides in this file. -->
+<configuration>
+    <property>
+       <name>mesos.master</name>
+       <value>10.37.0.72:5050</value>
+       <description>Mesos master节点的ip及端口号.</description>
+    </property>
+    <property>
+       <name>will.start.mesos.slaves.host.name</name>
+       <value>will-start-hostname.txt</value>
+       <description>将要在这些节点上启动该框架.</description>
+    </property>
+    <property>
+       <name>hadoop.image.name</name>
+       <value>10.37.0.72:5000/emc/mapreduce_on_docker</value>
+       <description>启动该框架所用的image, 注意此处用的是私有hub自制中的image.</description>
+    </property>
+    <property>
+       <name>resource.manager.host.name</name>
+       <value>Node-0</value>
+       <description>该节点作为container中的mapreduce的ResourceManager节点.</description>
+    </property>
+    <property>
+       <name>each.docker.container.cpus</name>
+       <value>1</value>
+       <description>每个container分配的cpu数.</description>
+    </property>
+    <property>
+       <name>each.docker.container.mem</name>
+       <value>1536</value>
+       <description>每个container分配的memory数.</description>
+    </property>
+    <property>
+       <name>start-mesos-docker-hadoop.shell.script</name>
+       <value>start-mesos-docker-hadoop.sh</value>
+       <description>利用该脚本启动并配置Hadoop集群.</description>
+    </property>
+    <property>
+       <name>mount.directory.on.host</name>
+       <value>/</value>
+       <description>mount时的主机目录.</description>
+    </property>
+    <property>
+       <name>mount.directory.on.container</name>
+       <value>/opt</value>
+       <description>mount时的container目录.</description>
+    </property>
+    <property>
+       <name>set.refuse.seconds</name>
+       <value>1</value>
+       <description>对不符合要求的资源持有的秒数.</description>
+    </property>
+    <property>
+       <name>hadoop.master.publish.ports</name>
+       <value>50070,8088</value>
+       <description>暴露出的container的端口号.</description>
+    </property>
+</configuration>
